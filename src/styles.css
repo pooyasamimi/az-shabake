@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+:root { font-family: 'Vazirmatn', Tahoma, sans-serif; color: #eef3fb; background: #0b1220; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
+.page { min-height: 100vh; padding: 34px 24px 22px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; background: radial-gradient(ellipse at 78% 20%, rgba(31, 105, 131, .18), transparent 35%), radial-gradient(ellipse at 12% 80%, rgba(62, 76, 148, .15), transparent 34%), #0b1220; }
+.page::before { content: ''; position: absolute; inset: 0; opacity: .14; pointer-events: none; background-image: linear-gradient(rgba(160,180,210,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(160,180,210,.08) 1px, transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(to bottom, black, transparent 90%); }
+.layout { width: min(980px, 100%); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; gap: 62px; position: relative; z-index: 1; }
+.intro { display: flex; flex-direction: column; justify-content: center; padding: 26px 10px 26px 0; }
+.crest { width: 66px; height: 66px; display: grid; place-items: center; border-radius: 20px; color: #8ce4db; background: rgba(72, 196, 181, .10); border: 1px solid rgba(116, 227, 214, .25); margin-bottom: 32px; }
+.course-label, .designer-label { color: #8e9db5; font-size: 13px; margin: 0 0 10px; letter-spacing: .02em; }
+.intro h1 { margin: 0; font-size: clamp(36px, 5vw, 54px); line-height: 1.35; font-weight: 800; letter-spacing: -.04em; }
+.intro h2 { color: #8ce4db; font-size: clamp(25px, 3vw, 34px); margin: 2px 0 0; font-weight: 600; }
+.rule { width: 54px; height: 3px; border-radius: 9px; background: #6bd4ca; margin: 32px 0 23px; }
+.designer-label { margin-bottom: 5px; }
+.designer-name { font-size: 21px; font-weight: 700; margin: 0; color: #e8eef8; }
+.login-panel { background: rgba(18, 28, 45, .91); border: 1px solid rgba(160, 181, 211, .16); border-radius: 23px; padding: 31px; box-shadow: 0 25px 75px rgba(0,0,0,.25); backdrop-filter: blur(16px); }
+.panel-heading { display: flex; align-items: center; gap: 14px; margin-bottom: 29px; }
+.panel-icon { flex: 0 0 48px; width: 48px; height: 48px; display: grid; place-items: center; color: #8ce4db; background: rgba(72,196,181,.11); border-radius: 15px; }
+.panel-heading h3 { font-size: 20px; margin: 0 0 5px; font-weight: 700; }
+.panel-heading p { color: #93a1b7; font-size: 12px; margin: 0; }
+form label { display: block; color: #d6deeb; font-size: 13px; font-weight: 600; margin: 0 0 9px; }
+.input-box { height: 51px; border: 1px solid #303d52; border-radius: 12px; display: flex; align-items: center; gap: 11px; padding: 0 14px; color: #8292aa; background: #0f1929; transition: border-color .2s, box-shadow .2s; }
+.input-box:focus-within { border-color: #66cfc5; box-shadow: 0 0 0 3px rgba(102,207,197,.09); }
+.input-box input { min-width: 0; width: 100%; color: #f3f7fc; background: transparent; outline: none; border: 0; font-size: 13px; }
+.input-box input::placeholder { color: #65748a; }
+.input-box input:disabled { opacity: .55; }
+.password-label { margin-top: 21px !important; }
+.eye { display: grid; place-items: center; color: #8292aa; border: 0; padding: 4px; background: transparent; cursor: pointer; }
+.attempts { display: flex; align-items: center; gap: 10px; margin: 23px 0 19px; font-size: 12px; color: #98a6ba; }
+.dots { display: flex; gap: 5px; margin-inline-start: auto; direction: ltr; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #344257; }
+.dot.used { background: #ff8b87; box-shadow: 0 0 10px rgba(255,139,135,.28); }
+.attempts strong { color: #c9d4e4; font-weight: 600; white-space: nowrap; }
+.submit { width: 100%; min-height: 49px; border: 0; border-radius: 12px; background: #75d8ce; color: #10242c; display: flex; justify-content: center; align-items: center; gap: 9px; font-weight: 800; font-size: 14px; cursor: pointer; transition: transform .15s, background .15s; }
+.submit:hover:not(:disabled) { background: #95e8df; transform: translateY(-1px); }
+.submit:disabled { opacity: .6; cursor: not-allowed; }
+.message { margin: -5px 0 14px; font-size: 12px; line-height: 1.8; color: #b5c1d2; }
+.message.error { color: #ffaaa5; }
+.message.success { color: #8de5b1; }
+.lock-message { display: flex; align-items: center; gap: 9px; padding: 12px; margin: -12px 0 20px; border-radius: 10px; color: #ffb0a9; background: rgba(240,95,91,.09); border: 1px solid rgba(240,95,91,.19); font-size: 12px; }
+.lock-message strong { margin-inline-start: auto; font-size: 15px; font-variant-numeric: tabular-nums; }
+.reset { display: flex; align-items: center; justify-content: center; gap: 7px; width: 100%; background: transparent; color: #aab7ca; border: 1px solid #303d52; border-radius: 11px; padding: 11px; margin-top: 12px; font-size: 12px; cursor: pointer; transition: color .15s, border-color .15s; }
+.reset:hover { color: #e7eef8; border-color: #61748e; }
+.hint { margin-top: 17px; text-align: center; color: #75869e; font-size: 11px; }
+.hint code { color: #b7dcd8; background: rgba(117,216,206,.08); padding: 2px 6px; border-radius: 5px; direction: ltr; display: inline-block; }
+footer { position: relative; z-index: 1; text-align: center; color: #596a82; font-size: 11px; margin-top: 35px; }
+.mobile-title { display: none; }
+.made{
+    font-size: x-large;
+}
+@media (max-width: 720px) { .page { padding: 25px 16px 18px; justify-content: flex-start; } .layout { grid-template-columns: 1fr; gap: 23px; max-width: 430px; } .intro { padding: 12px 4px 0; } .crest { width: 46px; height: 46px; border-radius: 14px; margin-bottom: 17px; } .intro h1 { font-size: 35px; } .intro h2 { font-size: 25px; } .rule { margin: 17px 0 12px; } .designer-name { font-size: 17px; } .login-panel { padding: 23px 20px; border-radius: 19px; } footer { margin-top: 24px; } }
+@media (max-width: 360px) { .attempts { gap: 7px; font-size: 11px; } .login-panel { padding: 19px 15px; } }
