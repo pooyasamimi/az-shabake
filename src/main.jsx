@@ -229,11 +229,11 @@ function App() {
             {message && (
               <p
                 className={`message ${message.includes('موفق')
-                    ? 'success'
-                    : message.includes('اشتباه') ||
-                      message.includes('قفل')
-                      ? 'error'
-                      : ''
+                  ? 'success'
+                  : message.includes('اشتباه') ||
+                    message.includes('قفل')
+                    ? 'error'
+                    : ''
                   }`}
                 role="status"
               >
@@ -266,12 +266,12 @@ function App() {
             onClick={resetDemo}
           >
             <RotateCcw size={16} />
-            بازنشانی دمو
+            ریست
           </button>
         </section>
       </section>
 
-      <footer className='made'>Made with 🩵 by Pooya Samimi</footer>
+      <footer className='made'>Made by Pooya Samimi</footer>
     </main>
   );
 }
