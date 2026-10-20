@@ -88,7 +88,7 @@ function App() {
       username.trim() === DEMO_USERNAME &&
       password === DEMO_PASSWORD
     ) {
-      setMessage('ورود آزمایشی موفق بود.');
+      setMessage('باریکلا');
       setAttempts(0);
       setLockedUntil(0);
       setPassword('');
@@ -101,11 +101,11 @@ function App() {
     if (next >= MAX_ATTEMPTS) {
       setAttempts(MAX_ATTEMPTS);
       setLockedUntil(Date.now() + LOCK_DURATION_MS);
-      setMessage('سه تلاش ناموفق؛ ورود برای ۳۰ ثانیه قفل شد.');
+      setMessage('سه تلاش ناموفق ورود برای ۳۰ ثانیه قفل شد.');
     } else {
       setAttempts(next);
       setMessage(
-        `اطلاعات ورود اشتباه است؛ ${MAX_ATTEMPTS - next} تلاش باقی مانده.`
+        `اطلاعات ورود اشتباه  ${MAX_ATTEMPTS - next} تلاش باقی مانده.`
       );
     }
   }
@@ -115,7 +115,7 @@ function App() {
     setLockedUntil(0);
     setUsername('');
     setPassword('');
-    setMessage('دمو بازنشانی شد.');
+    setMessage('ریست شد');
     setNow(Date.now());
     localStorage.removeItem(STORAGE_KEY);
   }
@@ -139,7 +139,6 @@ function App() {
           <p className="designer-name">پویا صمیمی</p>
         </aside>
 
-        {/* سمت چپ: فرم ورود */}
         <section className="login-panel" aria-label="فرم ورود">
           <div className="panel-heading">
             <div className="panel-icon">
